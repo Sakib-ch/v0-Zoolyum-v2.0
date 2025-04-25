@@ -1,10 +1,10 @@
-import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Check, ChevronRight } from "lucide-react"
+import { Logo } from "@/components/ui/logo"
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       <header className="container mx-auto flex items-center justify-between py-4">
         <div className="flex items-center">
           <Link href="/" className="flex items-center">
-            <Image src="/logo.svg" alt="Zoolyum Logo" width={120} height={30} />
+            <Logo size="medium" />
           </Link>
         </div>
         <nav className="hidden md:flex items-center space-x-6">
@@ -684,7 +684,7 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <Image src="/logo-white.svg" alt="Zoolyum Logo" width={120} height={30} className="mb-4" />
+              <Logo size="medium" className="mb-4" />
               <p className="text-slate-400 text-sm mb-4">
                 We're a creative agency focused on helping brands grow through strategic marketing and design.
               </p>

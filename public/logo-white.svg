@@ -1,4 +1,17 @@
-<svg width="120" height="30" viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M10 5L20 25H0L10 5Z" fill="#FF5722"/>
-  <text x="25" y="20" font-family="Arial" font-weight="bold" font-size="16" fill="#FFFFFF">Zoolyum</text>
+<svg width="400" height="120" viewBox="0 0 400 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Orange square with Z pattern -->
+  <rect width="120" height="120" fill="#FF5722"/>
+  <path d="M20 20L100 20L30 60L100 100L20 100L90 60L20 20Z" fill="black"/>
+  
+  <!-- Text "ZOOLYUM" in white -->
+  <path d="M150 40H190L150 80H190" stroke="white" stroke-width="8"/>
+  <circle cx="220" cy="60" r="25" stroke="white" stroke-width="8" fill="none"/>
+  <circle cx="280" cy="60" r="25" stroke="white" stroke-width="8" fill="none"/>
+  
+  <path d="M330 35V85" stroke="white" stroke-width="8"/>
+  <path d="M330 35L360 85" stroke="white" stroke-width="8"/>
+  <path d="M330 85L360 35" stroke="white" stroke-width="8"/>
+  
+  <path d="M380 35V85" stroke="white" stroke-width="8"/>
+  <path d="M380 60H400" stroke="white" stroke-width="8"/>
 </svg>
