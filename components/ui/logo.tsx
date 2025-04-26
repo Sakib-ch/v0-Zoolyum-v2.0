@@ -4,9 +4,10 @@ import Link from "next/link"
 interface LogoProps {
   variant?: "default" | "white"
   size?: "small" | "medium" | "large"
+  linkWrapper?: boolean
 }
 
-export function Logo({ variant = "default", size = "medium" }: LogoProps) {
+export function Logo({ variant = "default", size = "medium", linkWrapper = true }: LogoProps) {
   const logoSrc = variant === "white" ? "/logo-white.svg" : "/logo.svg"
 
   const dimensions = {
@@ -17,16 +18,24 @@ export function Logo({ variant = "default", size = "medium" }: LogoProps) {
 
   const { width, height } = dimensions[size]
 
-  return (
-    <Link href="/" className="flex items-center">
-      <Image
-        src={logoSrc || "/placeholder.svg"}
-        alt="Zoolyum Logo"
-        width={width}
-        height={height}
-        priority
-        className="h-auto w-auto"
-      />
-    </Link>
+  const logoImage = (
+    <Image
+      src={logoSrc || "/placeholder.svg"}
+      alt="Zoolyum Logo"
+      width={width}
+      height={height}
+      priority
+      className="h-auto w-auto"
+    />
   )
+
+  if (linkWrapper) {
+    return (
+      <Link href="/" className="flex items-center">
+        {logoImage}
+      </Link>
+    )
+  }
+
+  return <div className="flex items-center">{logoImage}</div>
 }
